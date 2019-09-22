@@ -36,10 +36,15 @@ class CashRegister
 
     def apply_discount
       if @employee_discount
-        @total = @total * (1 - @employee_discount / 100)
-        "After the discount, the total comes to $#{@total}"
+        new_total = @total * (1 - @employee_discount / 100)
+        "After the discount, the total comes to $#{new_total}"
       else
         "There is no discount to apply."
       end
     end
+
+    def void_last_transaction
+
+    end 
+
     end
